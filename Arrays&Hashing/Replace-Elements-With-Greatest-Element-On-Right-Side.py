@@ -13,6 +13,4 @@ class Solution:
             if current>right_max:
                 right_max=current
         return arr
-
-
-        
+   
