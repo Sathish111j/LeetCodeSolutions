@@ -10,5 +10,5 @@ class Solution(object):
             if prices[i]>prices[i-1]:
                 profit+=prices[i]-prices[i-1]
         return profit
-         
-        
+
+#Time complexity: O(n)
