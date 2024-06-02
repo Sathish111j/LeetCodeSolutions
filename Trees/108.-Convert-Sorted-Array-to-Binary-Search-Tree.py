@@ -23,5 +23,3 @@ class Solution:
         
         return construct(0,len(nums)-1)
 
-
-        
