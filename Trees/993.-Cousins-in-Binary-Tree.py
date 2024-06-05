@@ -34,3 +34,4 @@ class Solution:
         if root is None:
             return False
         return (self.level(root, x, 0) == self.level(root, y, 0)) and not self.isSibling(root, x, y)
+
