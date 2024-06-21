@@ -20,3 +20,5 @@ class Solution:
             return False
 
         return backtracking(0)
+
+# Time Complexity: O(4^N)
