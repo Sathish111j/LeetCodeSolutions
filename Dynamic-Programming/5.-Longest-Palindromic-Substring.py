@@ -11,7 +11,7 @@ class Solution:
 
 
         for i in range(len(s)):
-            helper(i,i) # for odd lenght
-            helper(i,i+1) # for even lenght
+            helper(i,i) # for odd length
+            helper(i,i+1) # for even length
 
         return self.res
