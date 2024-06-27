@@ -15,4 +15,3 @@ class Solution:
             helper(i,i+1) # for even lenght
 
         return self.res
-
