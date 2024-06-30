@@ -9,4 +9,6 @@ class Solution:
                 count+=min(lastseen.values())+1
         return count
 
-        
+        # can be done with list too
+        #  last_seen = [-1, -1, -1]  # Index 0 for 'a', 1 for 'b', 2 for 'c'
+        #  last_seen[ord(char) - ord('a')] = i
