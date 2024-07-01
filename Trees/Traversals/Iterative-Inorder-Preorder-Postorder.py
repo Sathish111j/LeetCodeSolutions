@@ -80,3 +80,33 @@ def postorder_traversal(root): # Using one stack
             cur = temp
     
     return post
+
+def all_traversals(root):
+    if not root:
+        return [], [], []
+
+    stack = [(root, 1)]
+    preorder = []
+    inorder = []
+    postorder = []
+
+    while stack:
+        node, state = stack.pop()
+
+        if state == 1:
+            # Preorder: Add node to preorder list, push node with state 2, then left child with state 1
+            preorder.append(node.val)
+            stack.append((node, 2))
+            if node.left:
+                stack.append((node.left, 1))
+        elif state == 2:
+            # Inorder: Add node to inorder list, push node with state 3, then right child with state 1
+            inorder.append(node.val)
+            stack.append((node, 3))
+            if node.right:
+                stack.append((node.right, 1))
+        else:
+            # Postorder: Add node to postorder list
+            postorder.append(node.val)
+
+    return preorder, inorder, postorder
