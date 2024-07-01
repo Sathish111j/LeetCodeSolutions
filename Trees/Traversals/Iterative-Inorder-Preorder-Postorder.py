@@ -55,3 +55,28 @@ def postorder_traversal(root):
         result.append(node.val)
     
     return result
+
+def postorder_traversal(root): # Using one stack
+    if not root:
+        return []
+
+    stack = []
+    post = []
+    cur = root
+    
+    while cur or stack:
+        while cur:
+            stack.append(cur)
+            cur = cur.left
+        
+        temp = stack[-1].right
+        if not temp:
+            temp = stack.pop()
+            post.append(temp.val)
+            while stack and temp == stack[-1].right:
+                temp = stack.pop()
+                post.append(temp.val)
+        else:
+            cur = temp
+    
+    return post
