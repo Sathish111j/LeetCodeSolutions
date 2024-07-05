@@ -14,3 +14,10 @@ def solve(height):
 
 # when ever in dp there is dp[i] = dp[i-1] + dp[i-2] we can use two variables to store the previous values
 #this make it space optimized
+
+
+# Approach	    Time Complexity	Space Complexity
+# Recursive	       O(2^n)	      O(n)
+# Memoization	   O(n)	          O(n)
+# Tabulation	   O(n)	          O(n)
+# Space-Optimized  O(n)	          O(1)
