@@ -5,11 +5,10 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         if root is None:
             return []
         queue=deque([root])
-        result=[]
         
         while queue:
             level_size=len(queue)
@@ -24,5 +23,4 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
                 
-            result.append(level)
-        return result
+        return level[0]
