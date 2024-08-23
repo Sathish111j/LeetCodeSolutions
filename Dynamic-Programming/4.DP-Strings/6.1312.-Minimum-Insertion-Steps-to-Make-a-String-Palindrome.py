@@ -1,7 +1,5 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
-        
-
          # this is same as longest common subsequence 
         text1=word1
         text2=word2
