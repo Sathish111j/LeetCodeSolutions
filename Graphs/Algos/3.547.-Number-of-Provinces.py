@@ -1,6 +1,6 @@
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
-        adj=defaultdict(list)
+        adj=defaultdict(list)# to find the no of connnected components
         
         for i in range(len(isConnected)):
             for j in range(len(isConnected)):
