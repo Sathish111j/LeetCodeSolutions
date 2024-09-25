@@ -23,4 +23,5 @@ class Solution:
         
         return len(s) - dp[len(text1)][len(text2)]  # just change here
 
-        # The ans for minimum no. of deletions to make a string palindrome will also be same because if we just remove the characters which are not a part of the lps(longest palindromic subsequence) we'll get the ans...which is same as n-len(lps)
+        # The ans for minimum no. of deletions to make a string palindrome will also be same because 
+        # if we just remove the characters which are not a part of the lps(longest palindromic subsequence) we'll get the ans...which is same as n-len(lps)
