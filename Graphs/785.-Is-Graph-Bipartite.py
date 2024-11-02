@@ -36,5 +36,35 @@ class Solution:
         
         return True
         
+
+    def dfs(start, graph, color):
+        stack = [(start, 0)]
+        color[start] = 0
         
+        while stack:
+            node, col = stack.pop()
+            
+            for neighbor in graph[node]:
+                if color[neighbor] == -1:
+                    color[neighbor] = 1 - col
+                    stack.append((neighbor, color[neighbor]))
+                elif color[neighbor] == col:
+                    return False
+                
+        return True
+
+    def isBipartite(graph):
+        n = len(graph)
+        color = [-1] * n
         
+        for i in range(n):
+            if color[i] == -1:
+                if not dfs(i, graph, color):
+                    return False
+                
+        return True
+        
+# time complexity: O(V + E)
+# space complexity: O(V + E)
+
+            
