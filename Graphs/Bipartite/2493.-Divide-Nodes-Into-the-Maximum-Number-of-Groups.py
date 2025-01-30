@@ -1,5 +1,8 @@
 class Solution:
     def magnificentSets(self, n: int, edges: List[List[int]]) -> int:
+# when not Bipartite connot is grouped as per condition
+# calculate max depth to count max grups can be formed
+# add all groups
         def isBipartite(node,c, component):
             color[node]=c
             component.append(node)
@@ -52,6 +55,4 @@ class Solution:
         
         return groups
 
-# when not Bipartite connot is grouped as per condition
-# calculate max depth to count max grups can be formed
-# add all groups
+
