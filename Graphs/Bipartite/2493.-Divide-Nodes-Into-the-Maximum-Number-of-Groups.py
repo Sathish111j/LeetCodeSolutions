@@ -54,5 +54,3 @@ class Solution:
             groups+=maxDepth(comp)
         
         return groups
-
-
