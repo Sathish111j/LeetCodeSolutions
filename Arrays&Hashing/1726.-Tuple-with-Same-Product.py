@@ -8,7 +8,4 @@ class Solution:
                 count+=product[prd]*8
                 product[prd]+=1
 
-        return count
-                            
-                            
-                            
+        return count                 
